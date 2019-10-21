@@ -5,11 +5,13 @@
  */
 package retoLogin;
 
+import java.io.Serializable;
+
 /**
  * The class that will be used as the message by the sockets.
  * @author Jon
  */
-public class Message {
+public class Message implements Serializable {
     //Attributes
     private int type;
     private User user;
