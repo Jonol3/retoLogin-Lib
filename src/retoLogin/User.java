@@ -80,6 +80,23 @@ public class User implements Serializable {
     public void setStatus(int status) {
         this.status = status;
     }
+    
+    public String getStatusString() {
+        if (status == 1) {
+            return "ENABLED";
+        } else if (status == 2) {
+            return "DISABLED";
+        }
+        return null;
+    }
+
+    public void setStatusString(String status) {
+        if (status.equals("ENABLED")) {
+            this.status = 1;
+        } else if (status.equals("DISABLED")) {
+            this.status = 2;
+        }
+    }
 
     public int getPrivilege() {
         return privilege;
@@ -87,6 +104,23 @@ public class User implements Serializable {
 
     public void setPrivilege(int privilege) {
         this.privilege = privilege;
+    }
+    
+    public String getPrivilegeString() {
+        if (privilege == 1) {
+            return "USER";
+        } else if (privilege == 2) {
+            return "ADMIN";
+        }
+        return null;
+    }
+
+    public void setPrivilegeString(String status) {
+        if (status.equals("USER")) {
+            this.privilege = 1;
+        } else if (status.equals("ADMIN")) {
+            this.privilege = 2;
+        }
     }
 
     public String getPassword() {
