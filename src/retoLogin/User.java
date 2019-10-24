@@ -5,13 +5,14 @@
  */
 package retoLogin;
 
+import java.io.Serializable;
 import java.sql.Timestamp;
 
 /**
  * The java bean of the user, to be used in the Message.
  * @author Jon
  */
-public class User {
+public class User implements Serializable {
     //Attributes
     private int id;
     private String login;
